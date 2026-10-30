@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.55);
+}
+
+/* Leaflet map custom pin styles */
+.custom-leaflet-marker,
+.citymemory-map-pin {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Dark mode map styling for OpenStreetMap tiles */
+.dark .dark-map-tiles .leaflet-tile {
+  filter: brightness(0.72) invert(1) contrast(2.2) hue-rotate(205deg) saturate(0.4) !important;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  background-color: #f1f5f9;
+}
+
+.dark .leaflet-container {
+  background-color: #0b1220;
+}

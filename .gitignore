@@ -1,0 +1,5 @@
+
+# Large ML files
+backend/ml/ml/datasets/raw/road_repairs/*.tar.gz
+backend/ml/ml/datasets/processed/embeddings/*.npy
+
