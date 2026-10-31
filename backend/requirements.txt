@@ -1,4 +1,4 @@
-﻿fastapi
+fastapi
 uvicorn[standard]
 supabase
 python-dotenv
@@ -7,3 +7,4 @@ numpy
 networkx
 pandas
 scikit-learn
+sentence-transformers
